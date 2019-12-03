@@ -8,7 +8,7 @@ class Todo extends Component {
         console.log(this.props.thetask.task)
         return (
             <div>
-                <FormControlLabel control={<Checkbox onChange={() => this.props.onCheck(this.props.thetask.id)} color="secondary"/>} label={this.props.thetask.task} 
+                <FormControlLabel control={<Checkbox onChange={() => this.props.onCheck(this.props.thetask.id)} color="secondary"/>} label={this.props.thetask.task} className={`task${this.props.thetask.completed ? ' completed' : ''}`}
                 />
             </div>
         )

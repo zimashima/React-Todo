@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 
 
-import {FormControlLabel, Checkbox, Divider} from '@material-ui/core'
+import {FormControlLabel, Checkbox} from '@material-ui/core'
 import Todo from './Todo'
 
 
@@ -11,8 +11,8 @@ class TodoList extends Component {
         return (
             <div className="todoList">
                 <div className="exampleTodo">
-                <FormControlLabel control={<Checkbox checked color="primary"/>} label="Example: Study JavaScript"/><br/>
-                <FormControlLabel control={<Checkbox checked color="primary"/>} label="Example: Learn React"/><br />
+                    <FormControlLabel control={<Checkbox disabled color="primary"/>} label="Example: Study JavaScript" className="task"/><br/>
+                    <FormControlLabel control={<Checkbox disabled checked color="primary"/>} label="Example: Learn React" className="task completed"/><br />
                 </div>
                 {
                     this.props.allTasks.map(thetask =>(
