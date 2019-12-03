@@ -11,12 +11,12 @@ class TodoForm extends Component {
             <div>
                 <form onSubmit={this.props.onSubmit} className="formContainer">
                     <div className="addTasks">
-                        <TextField className="textbox" type="text" variant="outlined" name="task" onChange={this.props.onChange} value={this.props.value} label="Add New Task..."/>
+                        <TextField className="textbox" type="text" variant="outlined" name="task" onChange={this.props.onChange} value={this.props.value} label="Add a New Task..."/>
                         <Button  variant="contained" color="primary" type="submit"> Add </Button>
                     </div>
                     <div className="clearTasks">
                         <Button className="button" variant="contained" color="secondary" onClick={this.props.onClick}>
-                        Clear Complete
+                        Clear Completed
                         </Button>
                     </div>
                 </form>

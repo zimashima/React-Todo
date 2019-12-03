@@ -69,7 +69,7 @@ class App extends React.Component {
       <Container>
         <Paper className="container">
           <Typography variant="h4" component="h2" color="Primary">My Tasks</Typography>
-          <Typography variant="body1" color="textSecondary">Add a new task and stay productive!</Typography>
+          <Typography variant="body1" color="textSecondary">Add new tasks and stay productive!</Typography>
           <TodoList allTasks={this.state.allTasks} onCheck={this.handleCheckBox}/>
           <TodoForm onSubmit={this.handleSubmit} onChange={this.handleChange} value={this.state.newTask} onClick={this.handleClear} />
         </Paper>
