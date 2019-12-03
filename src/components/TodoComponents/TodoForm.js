@@ -2,19 +2,23 @@ import React, {Component} from 'react'
 
 import {Button, TextField} from '@material-ui/core'
 
+import './Todo.css'
+
 class TodoForm extends Component {
 
     render() {
         return (
-            <div>
+            <div className="formContainer">
                 <form onSubmit={this.props.onSubmit}>
-                <TextField type="text" variant="outlined" name="task" onChange={this.props.onChange} value={this.props.value}/>
-                <Button variant="contained" color="primary" type="submit">
-                    Add
-                </Button>
-                <Button variant="contained" color="primary" onClick={this.props.onClick}>
-                    Clear Complete
-                </Button>
+                    <div className="addTasks">
+                        <TextField className="textbox" type="text" variant="outlined" name="task" onChange={this.props.onChange} value={this.props.value} label="Add New Task..."/>
+                        <Button  variant="contained" color="primary" type="submit"> Add </Button>
+                    </div>
+                    <div className="clearTasks">
+                        <Button className="button" variant="contained" color="secondary" onClick={this.props.onClick}>
+                        Clear Complete
+                        </Button>
+                    </div>
                 </form>
             </div>
         )

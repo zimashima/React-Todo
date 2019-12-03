@@ -4,8 +4,7 @@ import React from 'react';
 import TodoForm from './components/TodoComponents/TodoForm'
 import TodoList from './components/TodoComponents/TodoList'
 
-
-import {Typography} from '@material-ui/core'
+import {Paper, Typography, Container} from '@material-ui/core'
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
@@ -69,11 +68,14 @@ class App extends React.Component {
   render() {
     console.log(this.state.newTask)
     return (
-      <div>
-        <Typography variant="h3" component="h1" color="primary">My Todo List</Typography>
-        <TodoList allTasks={this.state.allTasks} onCheck={this.handleCheckBox}/>
-        <TodoForm onSubmit={this.handleSubmit} onChange={this.handleChange} value={this.state.newTask} onClick={this.handleClear} />
-      </div>
+      <Container>
+        <Paper className="container">
+          <Typography variant="h4" component="h2" color="Primary">My Tasks</Typography>
+          <Typography variant="body1" color="textSecondary">Add a new task and stay productive!</Typography>
+          <TodoList allTasks={this.state.allTasks} onCheck={this.handleCheckBox}/>
+          <TodoForm onSubmit={this.handleSubmit} onChange={this.handleChange} value={this.state.newTask} onClick={this.handleClear} />
+        </Paper>
+      </Container>
     );
   }
 }
