@@ -8,8 +8,8 @@ class TodoForm extends Component {
 
     render() {
         return (
-            <div className="formContainer">
-                <form onSubmit={this.props.onSubmit}>
+            <div>
+                <form onSubmit={this.props.onSubmit} className="formContainer">
                     <div className="addTasks">
                         <TextField className="textbox" type="text" variant="outlined" name="task" onChange={this.props.onChange} value={this.props.value} label="Add New Task..."/>
                         <Button  variant="contained" color="primary" type="submit"> Add </Button>
