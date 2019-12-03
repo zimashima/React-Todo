@@ -1,14 +1,15 @@
 import React, {Component} from "react"
 
+import {FormControlLabel, Checkbox} from '@material-ui/core'
+
 class Todo extends Component {
-    constructor(){
-        super();
-    }
 
     render() {
+        console.log(this.props.thetask.task)
         return (
             <div>
-                FORM
+                <FormControlLabel control={<Checkbox onChange={() => this.props.onCheck(this.props.thetask.id)}/>} label={this.props.thetask.task} 
+                />
             </div>
         )
     }

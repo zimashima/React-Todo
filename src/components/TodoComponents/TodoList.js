@@ -1,15 +1,17 @@
 import React, {Component} from "react"
 
+import Todo from './Todo'
 
 class TodoList extends Component {
-    constructor(){
-        super();
-    }
 
     render() {
         return (
             <div>
-                FORM
+                {
+                    this.props.allTasks.map(thetask =>(
+                        <Todo key={thetask.id} thetask={thetask} onCheck={this.props.onCheck}/>
+                    ))
+                }
             </div>
         )
     }
