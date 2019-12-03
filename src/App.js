@@ -50,7 +50,6 @@ class App extends React.Component {
     this.setState({
       allTasks: this.state.allTasks.filter( task => task.completed === false)
     })
-    console.log(this.state.allTasks)
   }
 
   addNewTask = newTaskText => {
@@ -66,7 +65,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.newTask)
     return (
       <Container>
         <Paper className="container">
